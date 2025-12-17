@@ -1,20 +1,82 @@
-/* Placeholder for portfolio styles */
+/* Resetting default styles to ensure consistency */
+body, h1, h2, h3, p, ul, ol, a {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
+/* Setting up a polished font style */
 body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
+  font-family: 'Roboto', sans-serif;
+  color: #333;
+  line-height: 1.6;
+  background-color: #f5f5f5;
 }
 
+/* Styling for the header */
 header {
-    background-color: #f4f4f4;
-    padding: 20px;
-    text-align: center;
+  background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 50%, rgba(0,212,255,1) 100%);
+  color: #fff;
+  padding: 20px 0;
+  text-align: center;
+}
+header h1 {
+  font-size: 2.5rem;
+  font-weight: bold;
 }
 
-footer {
-    background-color: #222;
-    color: #fff;
-    padding: 10px;
-    text-align: center;
+/* Layout for the portfolio items */
+.container {
+  max-width: 1200px;
+  margin: 20px auto;
+  padding: 20px;
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.portfolio-item {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.portfolio-item img {
+  width: 100%;
+  height: auto;
+}
+
+.portfolio-item-content {
+  padding: 15px;
+}
+
+.portfolio-item-content h2 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+
+.portfolio-item-content p {
+  color: #666;
+  margin-bottom: 10px;
+}
+
+.portfolio-item-content a {
+  text-decoration: none;
+  color: #007bfc;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+.portfolio-item-content a:hover {
+  color: #0056b3;
+}
+
+/* Adding responsive styles */
+@media (max-width: 768px) {
+  .portfolio-item {
+    flex-direction: column;
+  }
 }
