@@ -1,2 +1,1 @@
-# LRFC
-MY FREELANCING PORTFOLIO
+project-descriptive
