@@ -1,16 +1,124 @@
-/* Full-page aurora background */
-body {
-  margin: 0;
-  height: 100vh;
-  background: linear-gradient(270deg, #0d0d1a, #1a0d3b, #0d1a2f, #0d0d1a);
-  background-size: 800% 800%;
-  animation: aurora 15s ease infinite;
-  color: white; /* text color */
-  font-family: sans-serif;
+:root {
+  --bg: #0f172a;
+  --bg2: #111827;
+  --text: #e5e7eb;
+  --primary: #38bdf8;
 }
 
-@keyframes aurora {
-  0% {background-position: 0% 50%;}
-  50% {background-position: 100% 50%;}
-  100% {background-position: 0% 50%;}
+.light {
+  --bg: #f9fafb;
+  --bg2: #e5e7eb;
+  --text: #111827;
+}
+
+* {
+  margin: 0;
+  box-sizing: border-box;
+  font-family: Inter, sans-serif;
+}
+
+body {
+  background: var(--bg);
+  color: var(--text);
+}
+
+#loader {
+  position: fixed;
+  inset: 0;
+  background: var(--bg);
+  display: grid;
+  place-items: center;
+  font-size: 2rem;
+  z-index: 999;
+}
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 10%;
+  position: sticky;
+  top: 0;
+  background: rgba(0,0,0,0.5);
+  backdrop-filter: blur(10px);
+}
+
+.nav a, .nav button {
+  margin-left: 15px;
+  background: none;
+  border: none;
+  color: var(--text);
+  cursor: pointer;
+}
+
+.hero {
+  height: 90vh;
+  display: grid;
+  place-items: center;
+  text-align: center;
+  padding: 0 10%;
+}
+
+.section {
+  padding: 80px 10%;
+  text-align: center;
+}
+
+.dark {
+  background: var(--bg2);
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 25px;
+  margin-top: 40px;
+}
+
+.card {
+  background: #020617;
+  padding: 30px;
+  border-radius: 16px;
+  transition: 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-8px);
+}
+
+.btn-primary {
+  padding: 12px 30px;
+  border-radius: 30px;
+  background: var(--primary);
+  color: black;
+  border: none;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+form input, form textarea {
+  width: 100%;
+  margin: 10px 0;
+  padding: 12px;
+  border-radius: 10px;
+  border: none;
+}
+
+#modal {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.6);
+}
+
+.modal-content {
+  background: var(--bg);
+  padding: 30px;
+  max-width: 400px;
+  margin: 15% auto;
+  border-radius: 16px;
+}
+
+.reveal {
+  opacity: 0;
+  transform: translateY(40px);
 }
