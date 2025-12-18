@@ -3,70 +3,87 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>LRF | Portfolio</title>
 
-  <!-- Font -->
+  <title>LRFC — Web Developer & Python Projects</title>
+  <meta name="description" content="LRFC builds modern, responsive websites and Python tools for businesses and individuals." />
+
+  <!-- Google Font -->
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
 
-  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-  <!-- Dark Mode Toggle -->
-  <input type="checkbox" id="toggle">
-  <label for="toggle" class="toggle-btn">🌓</label>
-
-  <!-- Hero -->
-  <header class="hero">
-    <h1 class="glow">LRF</h1>
-    <p class="subtitle">Modern • Colorful • Professional</p>
+  <!-- NAVBAR -->
+  <header class="nav">
+    <h1 class="logo">LRFC</h1>
+    <nav>
+      <a href="#about">About</a>
+      <a href="#projects">Projects</a>
+      <a href="#contact">Contact</a>
+    </nav>
   </header>
 
-  <!-- About -->
-  <section class="section">
-    <h2>About Me</h2>
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-content">
+      <h2>Building Modern Websites & Python Tools</h2>
+      <p>I help individuals and small businesses turn ideas into fast, responsive, and clean digital products.</p>
+      <a href="#contact" class="btn-primary">Work With Me</a>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section id="about" class="section">
+    <h3>About Me</h3>
     <p>
-      I build modern, responsive websites using
-      <span>HTML</span>, <span>CSS</span>, and <span>Python</span>.
-      I focus on clean design, smooth interactions, and performance.
+      I’m a developer focused on building clean, modern websites and useful Python-based solutions.
+      I care about performance, simplicity, and delivering results that actually help people.
     </p>
   </section>
 
-  <!-- Projects -->
-  <section class="section">
-    <h2>Projects</h2>
+  <!-- PROJECTS -->
+  <section id="projects" class="section dark">
+    <h3>Projects</h3>
 
-    <div class="projects">
-      <div class="card">
-        <h3>Portfolio Website</h3>
-        <p>Dark modern portfolio with animations.</p>
-        <a href="#">View</a>
+    <div class="projects-grid">
+      <div class="project-card">
+        <h4>Portfolio Website</h4>
+        <p>Responsive personal website built with HTML, CSS, and modern layout techniques.</p>
       </div>
 
-      <div class="card">
-        <h3>Landing Page</h3>
-        <p>Colorful UI with smooth hover effects.</p>
-        <a href="#">View</a>
+      <div class="project-card">
+        <h4>Landing Page</h4>
+        <p>High-conversion landing page designed for clarity and speed.</p>
       </div>
 
-      <div class="card">
-        <h3>Python Project</h3>
-        <p>Logic-based project built with Python.</p>
-        <a href="#">View</a>
+      <div class="project-card">
+        <h4>Python Tool</h4>
+        <p>Automation script that improves workflow efficiency.</p>
       </div>
     </div>
   </section>
 
-  <!-- Footer -->
+  <!-- CTA -->
+  <section class="cta">
+    <h3>Need a Website or Tool?</h3>
+    <p>Let’s build something clean, fast, and effective.</p>
+    <a href="#contact" class="btn-secondary">Get in Touch</a>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact" class="section">
+    <h3>Contact</h3>
+    <p>Email me directly:</p>
+    <a class="email" href="mailto:lrfcofficialbusiness@gmail.com">
+      lrfcofficialbusiness@gmail.com
+    </a>
+  </section>
+
   <footer>
-    <p>
-      Contact:
-      <a href="mailto:lrfcofficialbusiness@gmail.com">
-        lrfcofficialbusiness@gmail.com
-      </a>
-    </p>
-    <p>© 2025 LRF</p>
+    <p>© 2025 LRFC. All rights reserved.</p>
   </footer>
 
+  <script src="script.js"></script>
 </body>
 </html>
