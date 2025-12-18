@@ -2,88 +2,122 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 
-  <title>LRFC — Web Developer & Python Projects</title>
-  <meta name="description" content="LRFC builds modern, responsive websites and Python tools for businesses and individuals." />
+  <title>LRFC — Web Development & Python Solutions</title>
+  <meta name="description" content="LRFC builds modern websites, landing pages, and Python tools for businesses and individuals.">
 
-  <!-- Google Font -->
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
-
   <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
-  <!-- NAVBAR -->
-  <header class="nav">
-    <h1 class="logo">LRFC</h1>
-    <nav>
-      <a href="#about">About</a>
-      <a href="#projects">Projects</a>
-      <a href="#contact">Contact</a>
-    </nav>
-  </header>
+<!-- LOADER -->
+<div id="loader">
+  <span>LRFC</span>
+</div>
 
-  <!-- HERO -->
-  <section class="hero">
-    <div class="hero-content">
-      <h2>Building Modern Websites & Python Tools</h2>
-      <p>I help individuals and small businesses turn ideas into fast, responsive, and clean digital products.</p>
-      <a href="#contact" class="btn-primary">Work With Me</a>
+<!-- NAV -->
+<header class="nav">
+  <h1 class="logo">LRFC</h1>
+  <nav>
+    <a href="#about">About</a>
+    <a href="#services">Services</a>
+    <a href="#projects">Projects</a>
+    <a href="#pricing">Pricing</a>
+    <a href="#contact">Contact</a>
+    <button id="themeToggle">🌙</button>
+  </nav>
+</header>
+
+<!-- HERO -->
+<section class="hero reveal">
+  <h2>Modern Websites & Python Tools</h2>
+  <p>I help people and businesses build fast, clean, and effective digital products.</p>
+  <a href="#contact" class="btn-primary">Hire Me</a>
+</section>
+
+<!-- ABOUT -->
+<section id="about" class="section reveal">
+  <h3>About</h3>
+  <p>
+    I’m a developer focused on clean design, performance, and results.
+    I build websites and Python tools that actually solve problems.
+  </p>
+</section>
+
+<!-- SERVICES -->
+<section id="services" class="section dark reveal">
+  <h3>Services</h3>
+  <div class="grid">
+    <div class="card">🌐 Website Development</div>
+    <div class="card">🚀 Landing Pages</div>
+    <div class="card">🐍 Python Automation</div>
+    <div class="card">📱 Responsive Design</div>
+  </div>
+</section>
+
+<!-- PROJECTS -->
+<section id="projects" class="section reveal">
+  <h3>Projects</h3>
+  <div class="grid">
+    <div class="card project" onclick="openModal('Portfolio Website')">Portfolio Website</div>
+    <div class="card project" onclick="openModal('Landing Page')">Landing Page</div>
+    <div class="card project" onclick="openModal('Python Tool')">Python Tool</div>
+  </div>
+</section>
+
+<!-- MODAL -->
+<div id="modal">
+  <div class="modal-content">
+    <span onclick="closeModal()">✕</span>
+    <h4 id="modalTitle"></h4>
+    <p>Project details, screenshots, or GitHub links can go here.</p>
+  </div>
+</div>
+
+<!-- PRICING -->
+<section id="pricing" class="section dark reveal">
+  <h3>Pricing</h3>
+  <div class="grid">
+    <div class="card">
+      <h4>Basic</h4>
+      <p>$99+</p>
+      <small>Simple website or landing page</small>
     </div>
-  </section>
-
-  <!-- ABOUT -->
-  <section id="about" class="section">
-    <h3>About Me</h3>
-    <p>
-      I’m a developer focused on building clean, modern websites and useful Python-based solutions.
-      I care about performance, simplicity, and delivering results that actually help people.
-    </p>
-  </section>
-
-  <!-- PROJECTS -->
-  <section id="projects" class="section dark">
-    <h3>Projects</h3>
-
-    <div class="projects-grid">
-      <div class="project-card">
-        <h4>Portfolio Website</h4>
-        <p>Responsive personal website built with HTML, CSS, and modern layout techniques.</p>
-      </div>
-
-      <div class="project-card">
-        <h4>Landing Page</h4>
-        <p>High-conversion landing page designed for clarity and speed.</p>
-      </div>
-
-      <div class="project-card">
-        <h4>Python Tool</h4>
-        <p>Automation script that improves workflow efficiency.</p>
-      </div>
+    <div class="card">
+      <h4>Standard</h4>
+      <p>$299+</p>
+      <small>Multi-page site or automation</small>
     </div>
-  </section>
+    <div class="card">
+      <h4>Custom</h4>
+      <p>Contact</p>
+      <small>Tailored solutions</small>
+    </div>
+  </div>
+</section>
 
-  <!-- CTA -->
-  <section class="cta">
-    <h3>Need a Website or Tool?</h3>
-    <p>Let’s build something clean, fast, and effective.</p>
-    <a href="#contact" class="btn-secondary">Get in Touch</a>
-  </section>
+<!-- CONTACT -->
+<section id="contact" class="section reveal">
+  <h3>Contact</h3>
 
-  <!-- CONTACT -->
-  <section id="contact" class="section">
-    <h3>Contact</h3>
-    <p>Email me directly:</p>
-    <a class="email" href="mailto:lrfcofficialbusiness@gmail.com">
-      lrfcofficialbusiness@gmail.com
-    </a>
-  </section>
+  <!-- Replace action with your Formspree endpoint -->
+  <form action="https://formspree.io/f/xxxxxxx" method="POST">
+    <input type="text" name="name" placeholder="Your Name" required>
+    <input type="email" name="email" placeholder="Your Email" required>
+    <textarea name="message" placeholder="Your Message" required></textarea>
+    <button class="btn-primary">Send Message</button>
+  </form>
 
-  <footer>
-    <p>© 2025 LRFC. All rights reserved.</p>
-  </footer>
+  <p class="email">or email: lrfcofficialbusiness@gmail.com</p>
+</section>
 
-  <script src="script.js"></script>
+<footer>
+  © 2025 LRFC. All rights reserved.
+</footer>
+
+<script src="script.js"></script>
 </body>
 </html>
